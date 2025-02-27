@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport", initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap">   
+    <link rel="stylesheet" href="../CSS/home-style.css">
+    <link rel="icon" type="image/png" href="../Img/Icon-blue.png">
+    <title>Eduardo Allefy - Resume</title>
+</head>
+
+<!---
+██╗  ██╗██╗    ██████╗ ███████╗██╗   ██╗
+██║  ██║██║    ██╔══██╗██╔════╝██║   ██║
+███████║██║    ██║  ██║█████╗  ██║   ██║
+██╔══██║██║    ██║  ██║██╔══╝  ╚██╗ ██╔╝
+██║  ██║██║    ██████╔╝███████╗ ╚████╔╝ 
+╚═╝  ╚═╝╚═╝    ╚═════╝ ╚══════╝  ╚═══╝  
+ Thank you for visiting my resume!
+-->
+
+<body>
+    <div class="container">
+        <nav>
+                <!-- Logo -->
+
+            <div class="logo"><b1>a</b1>Lumnus<b>.</b></div>
+            <ul class="navItems">
+
+                    <!-- Other Pages -->
+                <li><a href="../HTML/home.html">home</a></li>
+                <li><a href="../HTML/about.html">about</a></li>
+                <li><a href="../HTML/projects.html">projects</a></li>
+            </ul>
+
+                <!-- Language Selector -->
+            <div class="language">
+                <a class="language-selected">
+                      English
+                </a>
+                <ul>
+                    <li><a href="#" class="br">Português</a></li> <!-- pt-BR -->
+                    <li><a href="#" class="en">English</a></li> <!-- en-US -->
+                    <li><a href="#" class="es">Español</a></li> <!-- es --->
+                    <li><a href="#" class="jp">日本語</a></li> <!-- JP --->
+                </ul>
+            </div>
+
+                <!-- Social Midia Links -->
+            <div class="links">
+                <a href="https://www.linkedin.com/in/eduardoallefy/" target="_blank"><i class="fab fa-linkedin share"></i></a>
+                <a href="https://github.com/allefzy" target="_blank"><i class="fab fa-github share"></i></a>
+                <a href="https://www.instagram.com/ed_allefy/" target="_blank"><i class="fab fa-instagram share"></i></a>
+            </div>
+
+                <!-- Dark Mode Switch -->
+            <div class="toggleSwitch">
+                <i class="fa fa-sun"></i>
+                <i class="fa fa-moon"></i>
+            </div>
+        </nav>
+
+            <!-- Main Texts (Messed Up) -->
+        <main>
+            <div class="mainText">
+                <span class="topline">Hi!</span>
+                <h1>I'm</h1> <h2><span class="multiText"></span></h2>
+                <p>As a full-stack developer and designer, I'm eager to put my skills to work and help bring your ideas to life.<br><br> I thrive on connecting with people and fostering teamwork all around the world. I am passionate about what I do and always strive to be the best I can be.<br><br> Thank you for visiting my website and I'm looking forward to work with you!
+
+                        <!-- Buttons -->
+                            <div class="cv-dropdown">
+                                <button class="cv-btn">See CV</button>
+                                <div class="cv-options">
+                                    <a href="../Download/CV_EN.pdf" target="_blank">English</a>
+                                    <a href="../Download/CV_PT.pdf" target="_blank">Português</a>
+                                </div>
+                            </div>
+
+                    <a onclick="window.open('mailto:eduardo.palmerim25@gmail.com','_blank',)"> <button> Contact </button> </a>
+                    </div>
+                    </div>
+
+                <!-- Images -->
+            <div class="parent-element">
+                    <img class="img" src="../Img/Profile.png" id="photo">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <img src="../Img/splash.png" alt="splash" class="corner-image">
+        </footer>
+    </div>
+
+    <!-- Mobile warning -->
+
+    <div id="mobile-warning">   <h1 style="text-align: center;">Attention</h1>
+        <p>This website is optimized for desktop viewing and may not display properly on mobile devices. <br><br> Please check if your Web Browser has the configuration to see in desktop view.<br><br> </p>
+        <h4> It's important make your website responsive, I'm tremendously sorry for this disturbance, please know that I'm aware of the issue and plan to address it in the future. Thank you for your understanding and patience.</h4>
+    </div>
+
+
+    <!-- JS for the typing effect. -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typingEffect = new Typed(".multiText",{
+            strings : ["Eduardo", "coder", "designer", "artista" ,"人間 ^1000"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500,
+        })
+    </script>
+
+    <!-- JS for the Dark Mode -->
+    <script>
+        const toggleSwitch = document.querySelector('.toggleSwitch');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('switch');
+        }
+        toggleSwitch.addEventListener('click', function() {
+            document.body.classList.toggle('switch');
+            localStorage.setItem('theme', document.body.classList.contains('switch') ? 'dark' : 'light');
+        })
+    </script>
+
+    <!-- JS for the Language Selector -->
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
+        crossorigin="anonymous">
+    </script>
+    
+    <script src="../JS/HomelanguageSelector.js"></script>
+    
+</body>
+</html>
